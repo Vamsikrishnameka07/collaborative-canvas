@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; font-family: system-ui, Arial, sans-serif; }
+#app { display: flex; flex-direction: column; height: 100%; }
+header { padding: 8px 12px; background: #111; color: #fff; display: flex; align-items: center; justify-content: space-between; }
+.controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+main { display: grid; grid-template-columns: 220px 1fr; gap: 8px; padding: 8px; height: calc(100% - 56px); }
+#users { border: 1px solid #ddd; padding: 8px; border-radius: 6px; overflow: auto; }
+#users .user { display: flex; align-items: center; gap: 8px; padding: 6px; border-bottom: 1px dashed #eee; }
+#users .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+#canvas-wrap { position: relative; border: 1px solid #ddd; border-radius: 6px; overflow: hidden; background: #fff; }
+#canvas-wrap canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+#base { z-index: 1; }
+#overlay { z-index: 2; }
+#ghosts { z-index: 3; pointer-events: none; }

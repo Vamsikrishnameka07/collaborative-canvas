@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Collaborative Canvas</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<div id="app">
+<header>
+<h1>Collaborative Canvas</h1>
+<div class="controls">
+<label>Tool:
+<select id="tool">
+<option value="brush">Brush</option>
+<option value="eraser">Eraser</option>
+</select>
+</label>
+<label>Color: <input type="color" id="color" value="#222222" /></label>
+<label>Width: <input type="range" id="width" min="1" max="40" value="6" /></label>
+<button id="undo">Undo</button>
+<button id="redo">Redo</button>
+<input id="room" placeholder="room id (optional)" />
+<input id="name" placeholder="your name (optional)" />
+<button id="join">Join</button>
+</div>
+</header>
+
+
+<main>
+<aside id="users"></aside>
+<div id="canvas-wrap">
+<canvas id="base"></canvas>
+<canvas id="overlay"></canvas>
+<canvas id="ghosts"></canvas>
+</div>
+</main>
+</div>
+
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script type="module" src="/main.js"></script>
+</body>
+</html>
